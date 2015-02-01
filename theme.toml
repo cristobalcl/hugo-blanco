@@ -1,0 +1,6 @@
+author = "Cristóbal Carnero Liñán"
+description = "Minimalistic theme for personal webs with fixed pages like 'about', 'cv',... and some social buttons."
+license = "MIT"
+name = "hugo-blanco"
+source_repo = ""
+tags = ["minimalistic", "white", "grey", "personal", "cv"]

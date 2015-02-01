@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+	<head>
+		<meta charset="utf-8">
+
+		<title>{{ .Title }}{{ if ne .Title .Site.Title }} – {{ .Site.Title }}{{ end }}</title>
+		<base href="{{ .Site.BaseUrl }}">
+		<link rel="canonical" href="{{ .Permalink }}">
+		<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Share:400,700&effect={{ .Site.Params.titleeffect }}">
+
+		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/blanco.css">
+	</head>
+	<body>
+		<header class="header-panel">
+			<h1 id="title" class="font-effect-{{ .Site.Params.titleeffect }}"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+			<h2 id="tagline">
+				<span class="fa-stack fa-lg" style="font-size: 40%">
+					<i class="fa fa-square fa-stack-2x"></i>
+ 		   			<i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+   				</span>
+				{{ .Site.Params.tagline }}
+			</h2> 
+		</header>
+
+		<div id="navigation-panel">
+			<nav id="menu-panel">
+				<ul class="fa-ul">
+					<li><a href="{{ .Site.BaseUrl }}"><i class="fa-li fa fa-home"></i> Home</a></li>
+					<li><a href="/about"><i class="fa-li fa fa-user"></i>About</a></li>
+					<!--li><a href="/blog"><i class="fa-li fa fa-pencil"></i>Blog</a></li-->
+					<li><a href="/projects"><i class="fa-li fa fa-cube"></i>Projects</a></li>
+					<li><a href="/cv"><i class="fa-li fa fa-file-text"></i>CV</a></li>
+				</ul>
+			</nav>
+
+			<aside id="social-panel">
+				<ul id="social">
+					<li><a href="{{ .Site.Params.github }}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-bitbucket fa-stack-1x fa-inverse"></i></span></a></li>
+					<li><a href="{{ .Site.Params.linkedin }}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li>
+					<li><a href="{{ .Site.Params.googleplus }}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span></a></li>
+					<li><a href="mailto:{{ .Site.Params.email }}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span></a></li>
+				</ul>
+
+			</aside>
+		</div>
