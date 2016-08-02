@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 
 		<title>{{ .Title }}{{ if ne .Title .Site.Title }} – {{ .Site.Title }}{{ end }}</title>
-		<base href="{{ .Site.BaseUrl }}">
+		<base href="{{ .Site.BaseURL }}">
 		<link rel="canonical" href="{{ .Permalink }}">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<header class="header-panel">
-			<h1 id="title" class="font-effect-{{ .Site.Params.titleeffect }}"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+			<h1 id="title" class="font-effect-{{ .Site.Params.titleeffect }}"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 			<h2 id="tagline">
 				<span class="fa-stack fa-lg" style="font-size: 40%">
 					<i class="fa fa-square fa-stack-2x"></i>
@@ -30,7 +30,7 @@
 		<div id="navigation-panel">
 			<nav id="menu-panel">
 				<ul class="fa-ul">
-					<li><a href="{{ .Site.BaseUrl }}"><i class="fa-li fa fa-home"></i> Home</a></li>
+					<li><a href="{{ .Site.BaseURL }}"><i class="fa-li fa fa-home"></i> Home</a></li>
 					<li><a href="/about"><i class="fa-li fa fa-user"></i>About</a></li>
 					<!--li><a href="/blog"><i class="fa-li fa fa-pencil"></i>Blog</a></li-->
 					<li><a href="/projects"><i class="fa-li fa fa-cube"></i>Projects</a></li>
