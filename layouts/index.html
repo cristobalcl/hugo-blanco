@@ -2,11 +2,23 @@
 
 <section id="main-panel">
 	<div>
-		{{ range first 10 .Data.Pages }}
-			{{ if eq .Type "post"}}
-				{{ .Render "summary"}}
-			{{ end }}
-		{{ end }}
+    <!-- Range over the pages and only include the ones that are a post type -->
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ range first 10 (.Paginate $pages).Pages }}
+    <article>
+      <!-- this <div> includes the title summary -->
+      <div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ .Summary }}
+      </div>
+      {{ if .Truncated }}
+      <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+      <div>
+        <a href="{{ .RelPermalink }}">Read More…</a>
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
 	</div>
 
 	<!--nav id="archive-navegation">
