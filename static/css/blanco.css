@@ -19,6 +19,7 @@ header,section,article,aside,footer
 h1, h2, h3
 {
 	font-weight: 700;
+  clear: both;
 }
 
 a
@@ -182,6 +183,8 @@ hr {
 
 	margin-top: 20px;
 	margin-bottom: 10px;
+
+  clear: both;
 }
 
 #footer-panel
