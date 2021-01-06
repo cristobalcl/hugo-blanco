@@ -1,6 +1,18 @@
 {{ partial "header.html" . }}
 
 <section id="main-panel">
+  {{ if .Site.Params.mediumUsername }}
+  <h1>Medium posts</h1>
+
+  <p>Visit my <a href="https://medium.com/@{{.Site.Params.mediumUsername}}" target="_blank">Medium's profile</a>.
+
+  <div class="medium_list"></div>
+
+  <hr/>
+  {{ end }}
+
+  <h1>Blog</h1>
+
 	<div>
     <!-- Range over the pages and only include the ones that are a post type -->
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
@@ -25,5 +37,12 @@
 		<a href="/post/">Archive</a>
 	</nav-->
 </section>
+
+{{ if .Site.Params.mediumUsername }}
+<script src="/js/medium.js"></script>
+<script>
+  updateMediumPosts("{{ .Site.Params.mediumUsername }}");
+</script>
+{{ end }}
 
 {{ partial "footer.html" . }}

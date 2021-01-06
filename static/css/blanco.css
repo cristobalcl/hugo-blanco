@@ -194,3 +194,13 @@ hr {
 	color: rgb(150, 150, 150);
 	width: 940px;
 }
+
+
+.medium_list img
+{
+	max-width: 100%;
+
+  object-fit: cover;
+  height: 128px;
+}
+
